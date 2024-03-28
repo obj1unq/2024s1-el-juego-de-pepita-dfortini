@@ -14,7 +14,7 @@ describe "Tests de Pepita" {
 		assert.equals(89, pepita.energia())
 	}
 
-
+	//TODO cuando cambia la posición de pepita, cambia la de silvestre
 
 }
 

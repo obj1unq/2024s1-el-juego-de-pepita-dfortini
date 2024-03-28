@@ -1,0 +1,19 @@
+import wollok.game.*
+import pepita.*
+import extras.*
+
+program pepitaGame {
+	// CONFIG	
+	game.title("Pepita")
+	game.height(10)
+	game.width(10)
+	game.ground("suelo.png")
+	
+	game.addVisual(nido)
+	game.addVisual(silvestre)
+	game.addVisualCharacter(pepita)
+	
+	game.start()
+	
+	
+}
