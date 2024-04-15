@@ -3,6 +3,7 @@ import wollok.game.*
 import pepita.*
 import extras.*
 import posiciones.*
+import comidas.*
 
 program pepitaGame {
 	// CONFIG	
@@ -13,7 +14,9 @@ program pepitaGame {
 	game.addVisual(nido)
 	game.addVisual(silvestre)
 	game.addVisual(pepita)
-	game.addVisual(muro)	
+	game.addVisual(muro)
+	game.addVisual(manzana)	
+	game.addVisual(alpiste)	
 	
 	
 	//comportamieno de Pepita
@@ -25,6 +28,7 @@ program pepitaGame {
 	
 	game.onCollideDo(pepita, {algo => algo.colision(pepita)})
 	game.onTick(800, "GRAVEDAD", {pepita.caer()})
+	game.onTick(5000, "MADURAR", {manzana.madurar()})
 	game.start()
 	
 	
