@@ -8,13 +8,20 @@ object nido {
 	method image() {
 		return "nido.png"
 	}
+	
+	method colision(personaje) {
+		personaje.ganar()
+	}
+	method esAtravesable() {
+		return true
+	}
+	
 
 }
 
 object silvestre {
 
-	var property position = game.at(0, 0)
-	var presa = pepita
+	const presa = pepita
 
 	method image() {
 		return "silvestre.png"
@@ -27,8 +34,23 @@ object silvestre {
 	method colision(personaje) {
 		personaje.atrapada()
 	}
+	method esAtravesable() {
+		return true
+	}
 
 }
 
+object muro {
+	
+	var property position = game.at(5,5)
+	
+	method image() {
+		return "muro.png"
+	}
+	method esAtravesable() {
+		return false
+	}
+	  
+}
 
 

@@ -2,7 +2,7 @@
 import wollok.game.*
 import pepita.*
 import extras.*
-import direcciones.*
+import posiciones.*
 
 program pepitaGame {
 	// CONFIG	
@@ -12,7 +12,8 @@ program pepitaGame {
 	game.ground("suelo.png")
 	game.addVisual(nido)
 	game.addVisual(silvestre)
-	game.addVisual(pepita)	
+	game.addVisual(pepita)
+	game.addVisual(muro)	
 	
 	
 	//comportamieno de Pepita
@@ -23,7 +24,7 @@ program pepitaGame {
 	
 	
 	game.onCollideDo(pepita, {algo => algo.colision(pepita)})
-	
+	game.onTick(800, "GRAVEDAD", {pepita.caer()})
 	game.start()
 	
 	
