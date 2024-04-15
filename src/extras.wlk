@@ -13,15 +13,22 @@ object nido {
 
 object silvestre {
 
-	var property position = game.at(0,0)
+	var property position = game.at(0, 0)
 	var presa = pepita
 
 	method image() {
 		return "silvestre.png"
 	}
-	
+
 	method position() {
-		return game.at(presa.position().x(), 0)
+		return game.at(presa.position().x().max(2), 0)
+	}
+	
+	method colision(personaje) {
+		personaje.atrapada()
 	}
 
 }
+
+
+
