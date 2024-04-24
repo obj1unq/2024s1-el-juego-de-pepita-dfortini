@@ -15,9 +15,10 @@ program pepitaGame {
 	game.addVisual(silvestre)
 	game.addVisual(pepita)
 	game.addVisual(muro)
-	game.addVisual(manzana)	
-	game.addVisual(alpiste)	
 	
+	const manzana = new Manzana()
+	game.addVisual(manzana)	
+	game.addVisual(alpiste)		
 	
 	//comportamieno de Pepita
 	keyboard.down().onPressDo({pepita.mover(abajo)})

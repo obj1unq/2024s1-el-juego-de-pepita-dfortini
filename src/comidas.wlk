@@ -1,10 +1,12 @@
 import wollok.game.*
+import randomizer.*
 
-object manzana {
+class Manzana {
 	const base= 5
 	var madurez = 1
 	
-	var property position = game.at(3,2)
+	var property position = randomizer.emptyPosition()
+
 	method image() {
 		return "manzana.png"
 	}
@@ -35,7 +37,7 @@ object manzana {
 
 object alpiste {
 
-	var property position = game.at(5,9)
+	var property position = randomizer.emptyPosition()
 	
 	method image() {
 		return "alpiste.png"
