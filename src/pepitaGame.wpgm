@@ -1,0 +1,18 @@
+import wollok.game.*
+import pepita.*
+import extras.*
+import posiciones.*
+import comidas.*
+import nivel.*
+
+program pepitaGame {
+	// CONFIG	
+	game.title("Pepita")
+	game.height(10)
+	game.width(10)
+	game.ground("suelo.png")
+	
+	const nivel1 = new Nivel(gravedad = 800)
+	nivel1.init()
+	game.start()
+}
