@@ -8,7 +8,6 @@ class Nivel {
 	const gravedad
 	
 	method init() {
-		console.println(" init " + gravedad)
 		game.addVisual(nido)
 		game.addVisual(silvestre)
 		game.addVisual(pepita)
