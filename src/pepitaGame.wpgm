@@ -1,9 +1,9 @@
-
 import wollok.game.*
 import pepita.*
 import extras.*
 import posiciones.*
 import comidas.*
+import nivel.*
 
 program pepitaGame {
 	// CONFIG	
@@ -11,28 +11,8 @@ program pepitaGame {
 	game.height(10)
 	game.width(10)
 	game.ground("suelo.png")
-	game.addVisual(nido)
-	game.addVisual(silvestre)
-	game.addVisual(pepita)
-	game.addVisual(muro)
 	
-	const manzana = new Manzana()
-	game.addVisual(manzana)	
-	game.addVisual(alpiste)		
-	
-	//comportamieno de Pepita
-	keyboard.down().onPressDo({pepita.mover(abajo)})
-	keyboard.up().onPressDo({pepita.mover(arriba)})
-	keyboard.left().onPressDo({pepita.mover(izquierda)})
-	keyboard.right().onPressDo({pepita.mover(derecha)})
-	
-	
-	game.onCollideDo(pepita, {algo => algo.colision(pepita)})
-	game.onTick(800, "GRAVEDAD", {pepita.caer()})
-	game.onTick(5000, "MADURAR", {manzana.madurar()})
+	const nivel1 = new Nivel(gravedad = 800)
+	nivel1.init()
 	game.start()
-	
-	
-	
-	
 }
